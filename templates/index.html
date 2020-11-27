@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Customer Details Form</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="colorlib.com">
+
+		<!-- MATERIAL DESIGN ICONIC FONT -->
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/material-design-iconic-font/css/material-design-iconic-font.css') }}">
+	</head>
+	<body>
+		<div class="wrapper">
+            <form method="POST" action="/result" id="wizard">
+        		<!-- SECTION 1 -->
+                <h4></h4>
+                <section>
+                    <h3>Customer Churn Prediction</h3>
+                	<div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Select the gender :
+                            </label>
+                            <div class="form-holder">
+                                Male<input type="radio" name="gender" value="1"/>
+    							Female<input type="radio" name="gender" value="0"/>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Senior Citizen :
+                            </label>
+                            <div class="form-holder">
+                                Yes<input type="radio" name="S_citizen" value="1"/>
+    							No<input type="radio" name="S_citizen" value="0"/>
+                            </div>
+                        </div>
+                	</div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Partner :
+                            </label>
+                            <div class="form-holder">
+                                Yes<input type="radio" name="Partner" value="1"/>
+    							No<input type="radio" name="Partner" value="0"/>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Dependents :
+                            </label>
+                            <div class="form-holder">
+                                Yes<input type="radio" name="Dependents" value="1"/>
+   								 No<input type="radio" name="Dependents" value="0"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Tenure :
+                            </label>
+                            <div class="form-holder">
+                                <input type="number" name="Tenure"  placeholder="Enter Tenure in Months "/>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Phone Service :
+                            </label>
+                            <div class="form-holder">
+                                Yes<input type="radio" name="P_Service" value="1"/>
+    							No<input type="radio" name="P_Service" value="0"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Multiple Lines :
+                            </label>
+                            <div class="form-holder">
+                                Yes<input type="radio" name="M_lines" value="1"/>
+    							No<input type="radio" name="M_lines" value="0"/>
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Select Internet Service :
+                            </label>
+                            <div class="form-holder">
+                                <input type="radio" name="x" value="0"/>DSL<br>
+							    <input type="radio" name="x" value="1"/>Fiber optic<br>
+							    <input type="radio" name="x" value="2"/>No
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+				<!-- SECTION 2 -->
+                <h4></h4>
+                <section>
+                	<h3>Customer Churn Prediction</h3>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Online Security :
+                            </label>
+                            <div class="form-holder">
+                                <input type="radio" name="O_Security" value="2"/>Yes<br>
+						        <input type="radio" name="O_Security" value="0"/>No<br>
+						        <input type="radio" name="O_Security" value="1"/>No internet service
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Online Backup :
+                            </label>
+                            <div class="form-holder">
+                                <input type="radio" name="O_Backup" value="2"/>Yes<br>
+						        <input type="radio" name="O_Backup" value="0"/>No<br>
+						        <input type="radio" name="O_Backup" value="1"/>No internet service
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                               Device Protection :
+                            </label>
+                            <div class="form-holder">
+                                <input type="radio" name="D_Protect" value="2"/>Yes<br>
+							    <input type="radio" name="D_Protect" value="0"/>No<br>
+							    <input type="radio" name="D_Protect" value="1"/>No internet service
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Tech Support :
+                            </label>
+                            <div class="form-holder">
+                                <input type="radio" name="T_Support" value="2"/>Yes<br>
+						        <input type="radio" name="T_Support" value="0"/>No<br>
+						        <input type="radio" name="T_Support" value="1"/>No internet service
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Streaming TV :
+                            </label>
+                            <div class="form-holder">
+                                <input type="radio" name="S_TV" value="2"/>Yes<br>
+						        <input type="radio" name="S_TV" value="0"/>No<br>
+						        <input type="radio" name="S_TV" value="1"/>No internet service
+                            </div>
+                        </div>
+                        <div class="form-col">
+                            <label for="">
+                                Streaming Movies :
+                            </label>
+                            <div class="form-holder password">
+                                <input type="radio" name="S_MOV" value="2"/>Yes<br>
+						        <input type="radio" name="S_MOV" value="0"/>No<br>
+						        <input type="radio" name="S_MOV" value="1"/>No internet service
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 3 -->
+                <h4></h4>
+                <section>
+                	<h3>Customer Churn Prediction</h3>
+                    <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                                Contract :
+                            </label>
+                            <div class="form-holder">
+                                        <input type="radio" name="Contract" value="0"/>Month-to-month<br>
+								        <input type="radio" name="Contract" value="1"/>One year<br>
+								        <input type="radio" name="Contract" value="2"/> Two year
+                            </div>
+                        </div>
+
+                        <div class="form-col">
+                            <label for="">
+                                Paperless Billing :
+                            </label>
+                            <div class="form-holder">
+                                 Yes<input type="radio" name="P_Billing" value="1"/>
+        						 No<input type="radio" name="P_Billing" value="0"/>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="form-row">
+                        <div class="form-col">
+                            <label for="">
+                               Payment Method :
+                            </label>
+                            <div class="form-holder">
+                                <input type="radio" name="Pay" value="3"/>Mailed check<br>
+							    <input type="radio" name="Pay" value="2"/>Electronic check<br>
+							    <input type="radio" name="Pay" value="0"/>Bank transfer (automatic)<br>
+							    <input type="radio" name="Pay" value="1"/>Credit card (automatic)
+							</div>
+						</div>
+
+                        <div class="form-col">
+                            <label for="">
+                                Monthly Charges :
+                            </label>
+                            <div class="form-holder">
+                                <input type="number" name="M_Charges" value="T_num"/>
+                            </div>
+                        </div>
+                    </div>
+                        <button type="submit">SUBMIT</button> 
+                </section>
+            </form>
+		</div>
+
+		<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+        
+        <!-- JQUERY STEP -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.steps.js')}}"></script>
+        
+        <script type="text/javascript" src="{{ url_for('static', filename='js/main.js')}}"></script>
+<!-- Template created and distributed by Colorlib -->
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='fonts/material-design-iconic-font/css/material-design-iconic-font.css') }}">
+    <style type="text/css">
+      @font-face {
+  font-family: "Poppins-Regular";
+  src: url("../static/fonts/poppins/Poppins-Regular.ttf"); }
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("../static/fonts/poppins/Poppins-Medium.ttf"); }
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("../static/fonts/poppins/Poppins-SemiBold.ttf"); }
+
+
+body {
+  font-family: "Poppins-Regular";
+  margin: 0;
+  color: #7a847b;
+  background: url("../static/images/form-wizard-bg.jpg") no-repeat center center;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center; }
+
+textarea {
+  resize: none; }
+
+input, textarea, select, button {
+  font-family: "Poppins-Regular";
+  font-size: 15px;
+  color: #333; }
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer; }
+  select option[value=""][disabled] {
+    display: none; }
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+textarea {
+  resize: none; }
+
+img {
+  max-width: 100%;
+  vertical-align: middle; }
+
+.wrapper {
+  width: 819px;
+  margin: auto;
+  padding: 7px;
+  background: white;
+  border-radius: 20px; 
+  box-shadow: 5px 5px 8px grey;}
+
+.wizard {
+  position: relative;
+  background: #fff;
+  padding: 64px 58px 0;
+  height: 560px; }
+h1{
+  text-align: center;
+  font-weight: 600;
+}
+
+h3 {
+  font-family: "Poppins-SemiBold";
+  font-size: 35px;
+  color: #4c94e0;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 32px; }
+
+button{
+  display: inline-flex;
+  width: 112px;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  background: #3377c0;
+  justify-content: center;
+  letter-spacing: 1px;
+  margin-left: 44%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+    </style>
+</head>
+   <body> 
+   	<div class="wrapper">
+      <h3>Predicted Result</h3>
+      <form method="POST" action="/chart" id="wizard">
+   		{% if result==1 %}
+          <h1 style="color: red"> {{ prediction }}</h1>
+        {% else %}
+           <h1 style="color: green"> {{ prediction }}</h1>
+        {% endif %}
+        <a href="chart.html">
+          <button type="submit">Weight of Attributes</button>
+        </a>
+      </form>
+	</div>
+   </body> 
+</html> 
